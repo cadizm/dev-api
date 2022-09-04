@@ -12,4 +12,5 @@ push: build
 run:
 	uvicorn --debug --port 9001 --env-file .env/local.py --reload  app.main:app
 
-.PHONY: all run docker-run build push
+deploy:
+	ansible-playbook --inventory ansible/hosts --limit=dev --user=cadizm ansible/deploy.yml
