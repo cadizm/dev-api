@@ -1,0 +1,6 @@
+[submodule "app/lib/words"]
+	path = app/lib/words
+	url = git@github.com:cadizm/words-with-friends.git
+[submodule "app/lib/wordle"]
+	path = app/lib/wordle
+	url = git@github.com:cadizm/wordle.git
