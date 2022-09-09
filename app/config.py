@@ -5,4 +5,7 @@ origins = [
 ]
 
 if os.environ.get('LOCAL'):
-  origins.append('http://localhost:8000')
+  origins.extend([
+    'http://localhost:3000',
+    'http://localhost:8000',
+  ])
