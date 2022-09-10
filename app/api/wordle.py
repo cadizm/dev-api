@@ -35,10 +35,7 @@ def wordle(request: WordleRequest):
   for index, letters in enumerate(request.misplaced):
     misplaced.extend(unpack(index, letters))
 
-  # infer included from misplaced
-  included = reduce(lambda x, y: x + y, request.misplaced, '')
-
   return [
     (word_score.word, f'{word_score.score:.7f}')
-    for word_score in suggest(wordle, request.excluded, included, misplaced)
+    for word_score in suggest(wordle, request.excluded, misplaced)
   ]
