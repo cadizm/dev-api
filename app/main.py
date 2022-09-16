@@ -15,6 +15,7 @@ app.add_middleware(
 
 app.include_router(api.wordle.router)
 app.include_router(api.words.router)
+app.include_router(api.spelling_bee.router)
 
 
 @app.get("/syn")

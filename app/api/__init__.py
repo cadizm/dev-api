@@ -1,1 +1,1 @@
-from . import words, wordle
+from . import words, wordle, spelling_bee
